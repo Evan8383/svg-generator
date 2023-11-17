@@ -1,8 +1,8 @@
-const svgGenerator = require('../svg-generator');
+const svgGenerator = require('../index');
 
 describe('Validate user inputs', () => {
   describe('Validate entered logo text', () => {
-    it('should return an message if the string is longer than 3 charactes', () => {
+    it('should return a message if the string is longer than 3 charactes', () => {
       const validate = svgGenerator.validateText('aaaa')
       expect(validate).toBe('Your entry has too many characters')
     })

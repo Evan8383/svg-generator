@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 
-function validateText(input) {
+const validateText = (input) => {
   if (input.length > 3) {
     return 'Your entry has too many characters'
   }
@@ -16,7 +17,6 @@ const validateColor = (input) => {
   }
   return true
 }
-
 let questions = [
   {
     name: 'text',
@@ -46,7 +46,6 @@ let questions = [
 
 const init = async () => {
   const data = await inquirer.prompt(questions)
-  
 }
 init()
 
