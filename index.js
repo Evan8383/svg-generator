@@ -49,7 +49,7 @@ let questions = [
 ]
 
 const createSvg = (fileName, data) => {
-  fs.writeFile(`./${fileName}.svg`, data)
+  fs.writeFile(`./examples/${fileName}.svg`, data)
 }
 
 const init = async () => {
