@@ -47,14 +47,13 @@ let questions = [
     validate: validateColor,
   }
 ]
-const createSvg = (fileName, data) => {
-  fs.writeFile(`./examples/${fileName}.svg`, data)
+const createSvg = (data) => {
+  fs.writeFile(`./examples/logo.svg`, data)
 }
 
 const init = async () => {
   const data = await inquirer.prompt(questions)
-  const { text, shape } = data
-  createSvg(`${text}-${shape}`, createShape(data))
+  createSvg(createShape(data))
 }
 init()
 
