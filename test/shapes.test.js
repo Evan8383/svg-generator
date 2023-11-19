@@ -1,4 +1,4 @@
-const { Triangle, Circle, Square, Shape, createShape } = require('../utils/shapes');
+const { Triangle, Circle, Square, Shape } = require('../utils/shapes');
 
 describe('Validate shape rendering', () => {
 
