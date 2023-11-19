@@ -54,6 +54,7 @@ const createSvg = (data) => {
 const init = async () => {
   const data = await inquirer.prompt(questions)
   createSvg(createShape(data))
+  console.log('Generated logo.svg and saved to the ./Examples directory.')
 }
 init()
 
