@@ -30,7 +30,7 @@ let questions = [
     name: "textColor",
     message: "Enter a text color or hex code : ",
     type: "input",
-    default: 'black',
+    default: 'white',
     validate: validateColor
   },
   {
@@ -43,7 +43,7 @@ let questions = [
     name: "shapeColor",
     message: "Enter a shape color or hex code: ",
     type: "input",
-    default: 'white',
+    default: 'black',
     validate: validateColor,
   }
 ]
@@ -56,7 +56,7 @@ const init = async () => {
   const data = await inquirer.prompt(questions)
   const { text, shape } = data
   // { text: 'EHB', textColor: 'red', shape: 'Circle', shapeColor: 'black' }
-  createSvg(`${text}-${shape}`, 'test')
+  createSvg(`${text}-${shape}`, createShape(data))
 }
 init()
 
